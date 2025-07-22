@@ -1,0 +1,28 @@
+{
+  "name": "va-recruitment-website",
+  "version": "1.0.0",
+  "description": "Professional website for VA recruitment agency",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "echo 'Deploy to your preferred hosting platform'"
+  },
+  "keywords": [
+    "virtual-assistant",
+    "recruitment",
+    "agency",
+    "website",
+    "responsive"
+  ],
+  "author": "VA Connect Pro",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/va-recruitment-website.git"
+  },
+  "homepage": "https://your-domain.com"
+} 
