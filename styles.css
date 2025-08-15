@@ -89,12 +89,16 @@ body {
     padding: 4px 8px;
 }
 
-/* Force nav-link active/focus/visited/target to gold and black */
-.nav-link.active,
-.nav-link:active,
-.nav-link:focus,
-.nav-link:visited,
-.nav-link:target {
+/* Active navigation state */
+.nav-link.active {
+    color: var(--gold) !important;
+    background: #111 !important;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+/* Hover state for navigation links */
+.nav-link:hover {
     color: var(--gold) !important;
     background: #111 !important;
     border-radius: 4px;
@@ -901,15 +905,8 @@ html {
     }
 } 
 
-/* FINAL OVERRIDE: Force nav link color to gold for all states */
-.nav-menu .nav-link.active,
-.nav-menu .nav-link:active,
-.nav-menu .nav-link:focus,
-.nav-menu .nav-link:visited,
-.nav-menu .nav-link:target,
-.nav-menu .nav-link.active:visited,
-.nav-menu .nav-link:focus:visited,
-.nav-menu .nav-link:active:visited {
+/* Ensure only active state gets the black background */
+.nav-menu .nav-link.active {
     color: var(--gold) !important;
     background: #111 !important;
     border-radius: 4px;
