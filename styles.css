@@ -1,3 +1,16 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 /* Black & Gold Theme */
 :root {
     --bg-main: #111;
@@ -32,7 +45,7 @@ body {
     background: var(--gold) !important;
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid var(--border);
     transition: all 0.3s ease;
 }
@@ -53,13 +66,13 @@ body {
 }
 
 .nav-logo-img {
-    height: 35px;
+    height: 45px;
     width: auto;
     display: block;
 }
 
 .nav-logo h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 900;
     color: #fff;
     letter-spacing: 2px;
@@ -667,17 +680,52 @@ body {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 14rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
     margin-bottom: 2rem;
     align-items: start;
+    max-width: 1200px;
+    margin-left: 13rem;
+    margin-right: auto;
 }
 
+.footer-section:nth-child(1) {
+    justify-self: start;
+}
+
+.footer-content .footer-section:nth-child(2) {
+    justify-self: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-section:nth-child(3) {
+    justify-self: start;
+}
+
+.footer-section:nth-child(3) h4 {
+    text-align: left;
+}
+
+.footer-section:nth-child(3) ul {
+    text-align: left !important;
+    padding-left: 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+.footer-section:nth-child(3) ul li {
+    text-align: left !important;
+    margin-bottom: 0.5rem;
+}
+
+/* Remove conflicting general rules */
 .footer-section h3,
 .footer-section h4 {
     margin-bottom: 1rem;
     color: var(--gold);
-    text-align: left;
 }
 
 .footer-section p {
@@ -688,7 +736,6 @@ body {
 
 .footer-section ul {
     list-style: none;
-    padding-left: 10px;
     margin: 0;
 }
 
@@ -758,11 +805,11 @@ body {
 }
 
 .footer-section:first-child {
-    margin-left: 10;
+    margin-left: 0;
 }
 
 .footer .container {
-    padding-left: 10rem;
+    padding-left: 0;
 }
 
 /* Responsive Design */
@@ -911,4 +958,34 @@ html {
     background: #111 !important;
     border-radius: 4px;
     padding: 4px 8px;
+} 
+
+.footer-content .footer-section:nth-child(2) {
+    justify-self: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-content .footer-section:nth-child(2) h4 {
+    text-align: center;
+}
+
+.footer-content .footer-section:nth-child(2) ul {
+    text-align: left !important;
+    padding-left: 0 !important;
+    list-style: none !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+}
+
+.footer-content .footer-section:nth-child(2) ul li {
+    text-align: left !important;
+    margin-bottom: 0.5rem;
+    width: 100% !important;
+    display: block !important;
 } 
